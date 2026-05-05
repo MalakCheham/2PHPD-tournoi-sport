@@ -1,0 +1,20 @@
+info:
+  name: Admin - Confirm Registration
+  type: http
+  seq: 17
+
+http:
+  method: PUT
+  url: http://127.0.0.1:8000/admin/registrations/4
+  body:
+    type: json
+    data: '{"status": "confirmée"}'
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

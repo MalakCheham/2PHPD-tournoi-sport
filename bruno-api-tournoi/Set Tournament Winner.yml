@@ -1,0 +1,23 @@
+info:
+  name: Set Tournament Winner
+  type: http
+  seq: 29
+
+http:
+  method: PUT
+  url: http://127.0.0.1:8000/api/tournaments/2
+  body:
+    type: json
+    data: |-
+      {
+          "winnerId": 3
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

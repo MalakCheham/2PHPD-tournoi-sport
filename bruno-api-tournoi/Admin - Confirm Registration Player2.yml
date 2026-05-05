@@ -1,0 +1,20 @@
+info:
+  name: Admin - Confirm Registration Player2
+  type: http
+  seq: 20
+
+http:
+  method: PUT
+  url: http://127.0.0.1:8000/admin/registrations/5
+  body:
+    type: json
+    data: '{"status": "confirmée"}'
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

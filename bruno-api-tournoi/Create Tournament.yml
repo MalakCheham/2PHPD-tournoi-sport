@@ -1,0 +1,29 @@
+info:
+  name: Create Tournament
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/tournaments
+  body:
+    type: json
+    data: |-
+      {
+          "tournamentName": "Tournoi de Tennis",
+          "startDate": "2026-05-01",
+          "endDate": "2026-05-30",
+          "description": "Un super tournoi de tennis",
+          "location": "Paris",
+          "maxParticipants": 16,
+          "sport": "Tennis"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
